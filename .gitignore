@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+.env
+
+# Build outputs
+dist/
+build/
+.next/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# OpenClaw
+.openclaw/
+*.acp-stream.jsonl
+
+# Learning files (personal)
+.learnings/
+
+# Docker
+*.docker/
+
+# Logs
+*.log
+
+# Temporary
+*.tmp
+*.temp
