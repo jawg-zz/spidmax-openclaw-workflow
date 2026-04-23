@@ -24,6 +24,10 @@ You → Max (task) → OpenCode+OmO (full cycle) → Max (report back)
 3. OmO handles everything: classify → inspect → research → plan → implement → verify → review
 4. Max reports back to you
 
+**CRITICAL: Do NOT check files or git status while waiting. Wait for the completion event. Never interfere.**
+
+> **Heartbeat trap:** When heartbeat fires during a task, don't use it as an excuse to check the stream. Just reply `HEARTBEAT_OK`. Curiosity and old habits cause interference — fight the urge to look.
+
 ---
 
 ## Canonical Rule
@@ -59,24 +63,25 @@ Edit `~/.config/opencode/opencode.json`:
 
 ```json
 {
-  "plugins": ["oh-my-openagent"],
-  "rules": ["~/.config/opencode/rules.karpathy.md"],
-  "agents": {
-    "sisyphus": "opencode-go/minimax-m2.7",
-    "hephaestus": "opencode-go/minimax-m2.7"
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["oh-my-openagent@latest"],
+  "provider": {
+    "openrouter": {
+      "name": "OpenRouter",
+      "options": {},
+      "models": {
+        "minimax-m2.5": {
+          "name": "openrouter/minimax/minimax-m2.5",
+          "limit": { "context": 1000000, "output": 32000 }
+        }
+      }
+    }
   },
-  "categories": {
-    "visual-engineering": "opencode-go/minimax-m2.7",
-    "ultrabrain": "opencode-go/minimax-m2.7",
-    "deep": "opencode-go/minimax-m2.7",
-    "artistry": "opencode-go/minimax-m2.7",
-    "quick": "opencode-go/minimax-m2.7",
-    "unspecified-low": "opencode-go/minimax-m2.7",
-    "unspecified-high": "opencode-go/minimax-m2.7",
-    "writing": "opencode-go/minimax-m2.7"
-  }
+  "model": "openrouter/minimax-m2.5"
 }
 ```
+
+**Also update oh-my-openagent.json** to use the same model for all agents and categories.
 
 ### 3. Set API Key
 

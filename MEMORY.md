@@ -55,7 +55,9 @@ Quick reference:
 3. OmO handles everything: classify, inspect, research, plan, implement, verify, review
 4. I report back to you
 
-That's it.
+**CRITICAL: Do NOT check files or git status while waiting. Wait for completion event. Never interfere.**
+
+**Heartbeat trap:** When heartbeat fires during a task, don't use it as an excuse to check the stream. Just reply `HEARTBEAT_OK`. Curiosity and old habits cause interference — fight the urge to look.
 
 *See TOOLS.md for spawn templates, AGENTS.md for technical details, SOUL.md for my role definition.*
 

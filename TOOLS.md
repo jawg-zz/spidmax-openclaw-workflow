@@ -72,14 +72,14 @@ Add whatever helps you do your job. This is your cheat sheet.
 - **Binary:** `opencode` (v1.3.17, npm: `opencode-ai`)
 - **Config:** `/data/.config/opencode/opencode.json`
 - **API Key:** `OPENCODE_API_KEY` env var (set in `/etc/environment`)
-- **Default Model:** `opencode-go/minimax-m2.7` (via opencode-go provider)
+- **Default Model:** `openrouter/minimax-m2.5` (via OpenRouter)
 - **Usage:** `opencode run "task"` or spawn via ACP (`sessions_spawn`)
 
 ### Oh My OpenAgent (OmO)
 - **Plugin:** `oh-my-openagent@latest` in opencode config
 - **Config:** `/data/.config/opencode/oh-my-openagent.json`
-- **All agents mapped to:** `opencode-go/minimax-m2.7`
-- **All categories mapped to:** `opencode-go/minimax-m2.7`
+- **All agents mapped to:** `openrouter/minimax-m2.5`
+- **All categories mapped to:** `openrouter/minimax-m2.5`
 - **Key command:** `ulw` / `ultrawork` activates full discipline agent system
 
 ### Workflow

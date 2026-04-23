@@ -226,6 +226,8 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 See MEMORY.md for the canonical coding rule. Templates below.
 
+> **⚠️ CRITICAL: Do NOT check files or git status while waiting. Wait for completion event. Never interfere with a running ACP agent.**
+
 ### ACP Agents (OpenCode, Codex, Claude Code, etc.)
 
 **What they are:**
